@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 1967908435}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &579989576
+--- !u!1 &207304011
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,122 +131,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 579989577}
-  - component: {fileID: 579989578}
-  - component: {fileID: 579989579}
+  - component: {fileID: 207304013}
+  - component: {fileID: 207304012}
   m_Layer: 0
-  m_Name: Generator
+  m_Name: TerrainGroup_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &579989577
+--- !u!114 &207304012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207304011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca34a6148db2d54493f84f379293f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GroupID: 0
+--- !u!4 &207304013
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579989576}
+  m_GameObject: {fileID: 207304011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1024, y: 0, z: -1024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1639771019}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &579989578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579989576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 358b6413e6c2d6342a0e21f9ae54a42c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _terrainData: {fileID: 11400000, guid: 669a6a9b57530654c97426f4135a74a1, type: 2}
-  _textureData: {fileID: 11400000, guid: c9ad1d9de723f4041a03bf8d37922222, type: 2}
---- !u!114 &579989579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579989576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f5629958264f541a1f1949f9d5bc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BaseColors:
-  - {r: 0.46226418, g: 0.30117235, b: 0.032707367, a: 0}
-  - {r: 0.47735852, g: 0.3105352, b: 0.032336537, a: 0}
-  - {r: 0.49245286, g: 0.31989807, b: 0.031965703, a: 0}
-  - {r: 0.5075472, g: 0.32926092, b: 0.031594872, a: 0}
-  - {r: 0.52264154, g: 0.3386238, b: 0.031224038, a: 0}
-  - {r: 0.5377359, g: 0.34798664, b: 0.030853208, a: 0}
-  - {r: 0.5528302, g: 0.3573495, b: 0.030482376, a: 0}
-  - {r: 0.56792456, g: 0.36671236, b: 0.030111544, a: 0}
-  - {r: 0.5830189, g: 0.3760752, b: 0.029740712, a: 0}
-  - {r: 0.59811324, g: 0.38543805, b: 0.02936988, a: 0}
-  - {r: 0.6132076, g: 0.39480093, b: 0.028999047, a: 0}
-  - {r: 0.6283019, g: 0.40416378, b: 0.028628215, a: 0}
-  - {r: 0.64339626, g: 0.41352662, b: 0.028257385, a: 0}
-  - {r: 0.6584906, g: 0.4228895, b: 0.027886553, a: 0}
-  - {r: 0.67358494, g: 0.43225235, b: 0.02751572, a: 0}
-  - {r: 0.6886792, g: 0.44161522, b: 0.027144888, a: 0}
-  - {r: 0.7037736, g: 0.45097807, b: 0.026774056, a: 0}
-  - {r: 0.7188679, g: 0.46034092, b: 0.026403224, a: 0}
-  - {r: 0.7339623, g: 0.4697038, b: 0.026032392, a: 0}
-  - {r: 0.7490566, g: 0.47906664, b: 0.025661562, a: 0}
-  - {r: 0.7641509, g: 0.48842952, b: 0.02529073, a: 0}
-  - {r: 0.77924526, g: 0.49779236, b: 0.024919897, a: 0}
-  - {r: 0.7943396, g: 0.50715524, b: 0.024549065, a: 0}
-  - {r: 0.80943394, g: 0.51651806, b: 0.024178233, a: 0}
-  - {r: 0.8245283, g: 0.52588093, b: 0.0238074, a: 0}
-  - {r: 0.8396226, g: 0.53524375, b: 0.023436569, a: 0}
-  - {r: 0.85471696, g: 0.5446066, b: 0.023065737, a: 0}
-  - {r: 0.8698113, g: 0.5539695, b: 0.022694906, a: 0}
-  - {r: 0.88490564, g: 0.5633324, b: 0.022324074, a: 0}
-  - {r: 0.9, g: 0.5726952, b: 0.021953242, a: 0}
-  BaseHeights:
-  - 0
-  - 0.033333335
-  - 0.06666667
-  - 0.1
-  - 0.13333334
-  - 0.16666667
-  - 0.2
-  - 0.23333333
-  - 0.26666668
-  - 0.3
-  - 0.33333334
-  - 0.36666667
-  - 0.4
-  - 0.43333334
-  - 0.46666667
-  - 0.5
-  - 0.53333336
-  - 0.56666666
-  - 0.6
-  - 0.6333333
-  - 0.6666667
-  - 0.7
-  - 0.73333335
-  - 0.76666665
-  - 0.8
-  - 0.8333333
-  - 0.8666667
-  - 0.9
-  - 0.93333334
-  - 0.96666664
-  _count: 30
-  _start: {r: 0.46226418, g: 0.30117235, b: 0.032707367, a: 0}
-  _end: {r: 0.9150943, g: 0.5820581, b: 0.02158241, a: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,3 +347,143 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1639771018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639771019}
+  - component: {fileID: 1639771021}
+  - component: {fileID: 1639771020}
+  m_Layer: 0
+  m_Name: Terrain_0_0_66f869b4-6a58-4e0d-b4c4-0a4a0a65394d
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1639771019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639771018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 207304013}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!154 &1639771020
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639771018}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: be20baf7e2b2f9d448147bfd1e1a8748, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &1639771021
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639771018}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: be20baf7e2b2f9d448147bfd1e1a8748, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 1
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: b41dc20b60baa1b4ca4552e1ed25754a, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.8
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+--- !u!850595691 &1967908435
+LightingSettings:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 4
+  m_GIWorkflowMode: 1
+  m_EnableBakedLightmaps: 1
+  m_EnableRealtimeLightmaps: 0
+  m_RealtimeEnvironmentLighting: 1
+  m_BounceScale: 1
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
+  m_UsingShadowmask: 1
+  m_BakeBackend: 1
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
+  m_Padding: 2
+  m_LightmapCompression: 3
+  m_AO: 0
+  m_AOMaxDistance: 1
+  m_CompAOExponent: 1
+  m_CompAOExponentDirect: 0
+  m_ExtractAO: 0
+  m_MixedBakeMode: 2
+  m_LightmapsBakeMode: 1
+  m_FilterMode: 1
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+  m_ExportTrainingData: 0
+  m_TrainingDataDestination: TrainingData
+  m_RealtimeResolution: 2
+  m_ForceWhiteAlbedo: 0
+  m_ForceUpdates: 0
+  m_FinalGather: 0
+  m_FinalGatherRayCount: 256
+  m_FinalGatherFiltering: 1
+  m_PVRCulling: 1
+  m_PVRSampling: 1
+  m_PVRDirectSampleCount: 32
+  m_PVRSampleCount: 512
+  m_PVREnvironmentSampleCount: 256
+  m_PVREnvironmentReferencePointCount: 2048
+  m_LightProbeSampleCountMultiplier: 4
+  m_PVRBounces: 2
+  m_PVRMinBounces: 1
+  m_PVREnvironmentMIS: 1
+  m_PVRFilteringMode: 1
+  m_PVRDenoiserTypeDirect: 1
+  m_PVRDenoiserTypeIndirect: 1
+  m_PVRDenoiserTypeAO: 1
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 1
+  m_PVRFilteringGaussRadiusIndirect: 5
+  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+  m_PVRFilteringAtrousPositionSigmaIndirect: 2
+  m_PVRFilteringAtrousPositionSigmaAO: 1
+  m_PVRTiledBaking: 0

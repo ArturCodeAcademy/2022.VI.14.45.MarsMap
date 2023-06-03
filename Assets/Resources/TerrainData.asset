@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UniformScale: 50
   HeightMap: {fileID: 2800000, guid: 86035261df0dcee4c98628929308cf97, type: 3}
-  SurfaceMaterial: {fileID: 2100000, guid: 0b9375311ba380345bf7c98aa0146501, type: 2}
+  SurfaceMaterial: {fileID: 2100000, guid: b41dc20b60baa1b4ca4552e1ed25754a, type: 2}

@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ public class TerrainGenerator : MonoBehaviour
 {
     [SerializeField] private TerrainData _terrainData;
     [SerializeField] private TextureData _textureData;
+    [SerializeField] private Gradient _gradient;
 
     private float _minHeight;
     private float _maxHeight;
@@ -20,6 +22,13 @@ public class TerrainGenerator : MonoBehaviour
 	{
 		int heightMapX = _terrainData.HeightMap.width;
 		int heightMapY = _terrainData.HeightMap.height;
+		for (int x = 0; x < heightMapX; x++)
+			for (int z = 0; z < heightMapX; z++)
+			{
+				float surfaceHeight = _terrainData.HeightMap.GetPixel(x, z).grayscale;
+				_maxHeight = Mathf.Max(surfaceHeight, _maxHeight);
+				_minHeight = Mathf.Min(surfaceHeight, _minHeight);
+			}
 
 		for (int x = 0; x <= heightMapX - CHUNK_SIZE; x += CHUNK_SIZE - 1)
 		{
@@ -40,6 +49,7 @@ public class TerrainGenerator : MonoBehaviour
 		Mesh mesh = new Mesh();
 
 		List<Vector3> verts = new List<Vector3>();
+		List<Color> colors = new List<Color>(); 
 		List<int> tris = new List<int>();
 
 		for(int x = 0; x < CHUNK_SIZE; x++)
@@ -60,9 +70,6 @@ public class TerrainGenerator : MonoBehaviour
 				tris.Add(CHUNK_SIZE * (x - 1) + z - 1);
 				tris.Add(CHUNK_SIZE * (x - 1) + z);
 				tris.Add(CHUNK_SIZE * x + z);
-
-				_maxHeight = Mathf.Max(surfaceHeight, _maxHeight);
-				_minHeight = Mathf.Min(surfaceHeight, _minHeight);
 			}
 		}
 
@@ -74,8 +81,15 @@ public class TerrainGenerator : MonoBehaviour
 			triangles[i] = i;
 		}
 
+		foreach (Vector3 vertex in flatShadedVerts)
+		{
+			float h = Mathf.InverseLerp(_minHeight, _maxHeight, vertex.y);
+			colors.Add(_gradient.Evaluate(h));
+		}
+
 		mesh.vertices = flatShadedVerts;
 		mesh.triangles = triangles;
+		mesh.colors = colors.ToArray();
 		mesh.RecalculateBounds();
 
 		meshFilter.mesh = mesh;
